@@ -1,6 +1,6 @@
-package com.amazon.ata.trees.classroom;
+package com.amazon.ata.trees;
 
-import com.amazon.ata.trees.classroom.dao.ContactDao;
+import com.amazon.ata.trees.dao.ContactDao;
 
 import org.junit.jupiter.api.Test;
 

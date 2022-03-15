@@ -1,4 +1,4 @@
-package com.amazon.ata.trees.classroom.model;
+package com.amazon.ata.trees.model;
 
 public class Name {
 

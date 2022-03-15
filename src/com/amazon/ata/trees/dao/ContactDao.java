@@ -1,9 +1,9 @@
-package com.amazon.ata.trees.classroom.dao;
+package com.amazon.ata.trees.dao;
 
-import com.amazon.ata.trees.classroom.model.Contact;
-import com.amazon.ata.trees.classroom.model.Name;
-import com.amazon.ata.trees.classroom.model.SortBy;
-import com.amazon.ata.trees.classroom.model.SortOrder;
+import com.amazon.ata.trees.model.Contact;
+import com.amazon.ata.trees.model.Name;
+import com.amazon.ata.trees.model.SortBy;
+import com.amazon.ata.trees.model.SortOrder;
 
 import java.util.SortedMap;
 import javax.inject.Inject;

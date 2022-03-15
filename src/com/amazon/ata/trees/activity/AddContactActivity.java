@@ -1,8 +1,8 @@
-package com.amazon.ata.trees.classroom.activity;
+package com.amazon.ata.trees.activity;
 
-import com.amazon.ata.trees.classroom.dao.ContactDao;
-import com.amazon.ata.trees.classroom.model.Contact;
-import com.amazon.ata.trees.classroom.model.Name;
+import com.amazon.ata.trees.dao.ContactDao;
+import com.amazon.ata.trees.model.Contact;
+import com.amazon.ata.trees.model.Name;
 
 import javax.inject.Inject;
 

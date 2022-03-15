@@ -1,9 +1,9 @@
-package com.amazon.ata.trees.classroom.dependency;
+package com.amazon.ata.trees.dependency;
 
-import com.amazon.ata.trees.classroom.activity.AddContactActivity;
-import com.amazon.ata.trees.classroom.activity.ClearContactsActivity;
-import com.amazon.ata.trees.classroom.activity.GetContactsActivity;
-import com.amazon.ata.trees.classroom.activity.GetContactsStartingAtActivity;
+import com.amazon.ata.trees.activity.AddContactActivity;
+import com.amazon.ata.trees.activity.ClearContactsActivity;
+import com.amazon.ata.trees.activity.GetContactsActivity;
+import com.amazon.ata.trees.activity.GetContactsStartingAtActivity;
 
 import dagger.Component;
 

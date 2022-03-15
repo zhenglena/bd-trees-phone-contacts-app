@@ -1,17 +1,5 @@
 ## Phone Contacts App
 
-**Branch name:** trees-classroom
-
-**RDE workflows:**
-- `trees-classroom-phase0`
-- `trees-classroom-phase1`
-- `trees-classroom-phase2`
-
-### Preliminaries
-
-Run the RDE workflow `trees-classroom-phase0` to ensure your snippets build successfully before continuing
-to the rest of the activity.
-
 ### Introduction
 
 For this activity, you'll be building a simple version of a phone contacts app, similar to what you might use on your
@@ -51,7 +39,7 @@ use cases.
 
 *Disclaimer: One difference that you'll notice here is that our Activity classes don't yet accept/return Response/Result
 objects. They're accepting/returning individual values or internal model objects. We'll keep our activities like this
-until we create our service infrastructure and the necessary Coral models. That retrofit is beyond the scope of this 
+until we create our service infrastructure and the necessary models. That retrofit is beyond the scope of this 
 activity.*
 
 ### Phase 1: Update ContactDao to support AddContact, GetContacts, ClearContacts
@@ -73,7 +61,7 @@ Phase 1 is complete when:
 
 - You have created `TreeMap`s in `ContactDao`'s constructor for sorting contacts by first name and last name
 - You have implemented `ContactDao::getContacts` 
-- `trees-classroom-phase1` RDE workflow passes
+- `Phase0Test` and `Phase1Test` tests pass.
 
 **Hints**
 * [How can I sort by first name and last name?](src/com/amazon/ata/trees/hints/hint01.md)
@@ -116,7 +104,7 @@ methods that can do what you need!
 
 Phase 2 is complete when:
 - You have implemented `ContactDao`'s `getContactsStartingAt`
-- `trees-classroom-phase2` RDE workflow passes
+- `Phase2Test` tests pass
 
 **Hints**
 * [How do I only retrieve part of a TreeMap?](src/com/amazon/ata/trees/hints/hint03.md)
