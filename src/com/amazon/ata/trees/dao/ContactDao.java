@@ -5,7 +5,8 @@ import com.amazon.ata.trees.model.Name;
 import com.amazon.ata.trees.model.SortBy;
 import com.amazon.ata.trees.model.SortOrder;
 
-import java.util.SortedMap;
+import java.util.*;
+import java.util.stream.Collectors;
 import javax.inject.Inject;
 import javax.inject.Singleton;
 
@@ -23,8 +24,8 @@ public class ContactDao {
 
     @Inject
     public ContactDao() {
-        this.contactsSortedByFirstName = null;
-        this.contactsSortedByLastName = null;
+        this.contactsSortedByFirstName = new TreeMap<>((a, b) -> a.getFirstName().compareTo(b.getFirstName()));
+        this.contactsSortedByLastName = new TreeMap<>((a,b) -> a.getLastName().compareTo(b.getLastName()));
     }
 
     /**
@@ -46,8 +47,13 @@ public class ContactDao {
      * @return map of name to contacts in requested sorted order.
      */
     public SortedMap<Name, Contact> getContacts(SortBy sortBy, SortOrder sortOrder) {
-        // TODO implement
-        return null;
+        SortedMap<Name, Contact> contacts;
+        if (sortBy == SortBy.FIRST_NAME) {
+            contacts = contactsSortedByFirstName;
+        } else {
+            contacts = contactsSortedByLastName;
+        }
+        return (sortOrder == SortOrder.DESCENDING) ? new TreeMap<>(contacts).descendingMap() : contacts;
     }
 
     /**
@@ -69,8 +75,7 @@ public class ContactDao {
      * order.
      */
     public SortedMap<Name, Contact> getContactsStartingAt(Name startKey, SortBy sortBy, SortOrder sortOrder) {
-        // TODO implement
-        return null;
+        return getContacts(sortBy, sortOrder).tailMap(startKey);
     }
 
 }
